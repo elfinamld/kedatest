@@ -18,7 +18,7 @@ const list = [
 ];
 
 const RadioWithLabels = () => {
-  const [active, setActive] = useState(null);
+  const [active, setActive] = useState("Radio A");
 
   const handleActive = (value) => {
     setActive(value);

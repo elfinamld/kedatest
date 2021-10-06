@@ -4,23 +4,24 @@ import TextInput from "../../molecules/TextInput";
 import BaseView from "../BaseView/BaseView";
 import CombinationComp from "../CombinationComp";
 
-const list = [
-  {
-    value: "opt1",
-    children: <TextInput />,
-  },
-  {
-    value: "opt2",
-    children: <CombinationComp />,
-  },
-];
-
 const RadioWithOther = () => {
   const [active, setActive] = useState("opt1");
 
   const handleActive = (value) => {
     setActive(value);
   };
+
+  const list = [
+    {
+      value: "opt1",
+      children: <TextInput disabled={active !== "opt1"} />,
+    },
+    {
+      value: "opt2",
+      children: <CombinationComp disabled={active !== "opt2"} />,
+    },
+  ];
+
   return (
     <BaseView title={"Radio With Other Sub Component"}>
       <div>

@@ -1,24 +1,26 @@
+import { MenuItem, Select } from "@mui/material";
 import React from "react";
+import { styling } from "../../../assets/styling";
 
 const DropDown = ({ data, title, open, onOpen, onClick }) => {
-  console.log(open);
   return (
-    <select id="language" placeholder={title}>
+    <Select
+      labelId="demo-simple-select-label"
+      id="demo-simple-select"
+      value={title}
+      displayEmpty
+      size={"small"}
+      onChange={onClick}
+    >
+      <MenuItem value="" style={{ ...styling.text }}>
+        <em>Select Language</em>
+      </MenuItem>
       {data.map((el, id) => (
-        <option
-          key={id}
-          style={{ marginLeft: 10, marginRight: 10 }}
-          value={el.title}
-          onClick={() => {
-            onOpen();
-            onClick(el.title);
-          }}
-          selected={el.title === title ? title : null}
-        >
+        <MenuItem key={id} value={el.title} style={{ ...styling.text }}>
           {el.title}
-        </option>
+        </MenuItem>
       ))}
-    </select>
+    </Select>
   );
 };
 

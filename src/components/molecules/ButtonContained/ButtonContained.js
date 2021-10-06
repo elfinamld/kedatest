@@ -1,23 +1,26 @@
 import React from "react";
+import Button from "@mui/material/Button";
 
-const Button = ({ label, bgColor, onClick }) => {
+const ButtonContained = ({ label, bgColor, onClick, disabled }) => {
   return (
-    <button
+    <Button
       onClick={() => onClick(label)}
+      variant="contained"
+      disabled={disabled}
+      size={"small"}
       style={{
         borderRadius: 20,
         paddingLeft: 10,
         paddingRight: 10,
-        paddingTop: 5,
-        paddingBottom: 5,
         backgroundColor: bgColor,
         color: "white",
         borderColor: "transparent",
+        fontSize: 10,
       }}
     >
       {label}
-    </button>
+    </Button>
   );
 };
 
-export default Button;
+export default ButtonContained;

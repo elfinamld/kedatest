@@ -7,11 +7,13 @@ const Date = () => {
       <input
         type={"date"}
         style={{
+          backgroundColor: "white",
+          borderColor: "ButtonHighlight",
           height: 30,
           paddingLeft: 10,
           paddingRight: 10,
           borderRadius: 5,
-          borderWidth: 0.2,
+          borderWidth: 0.5,
           ...styling.text,
         }}
       />

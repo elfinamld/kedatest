@@ -21,7 +21,7 @@ const data = [
 
 const RadioWithDropdown = () => {
   const [active, setActive] = useState("opt2");
-  const [title, setTitle] = useState("Select Language");
+  const [title, setTitle] = useState("");
   const [open, setOpen] = useState(false);
 
   const handleActive = (value) => {
@@ -32,8 +32,8 @@ const RadioWithDropdown = () => {
     setOpen(!open);
   };
 
-  const handleValue = (title) => {
-    setTitle(title);
+  const handleValue = (event) => {
+    setTitle(event.target.value);
     handleOpen();
   };
 
@@ -59,7 +59,7 @@ const RadioWithDropdown = () => {
   ];
 
   return (
-    <BaseView title={"Radio With Sub Component Drop Down"}>
+    <BaseView title={"Radio With Sub Component Select Option"}>
       <div>
         {list.map((el, id) => (
           <RadioButton

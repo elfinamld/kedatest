@@ -1,12 +1,12 @@
 import React from "react";
 import { styling } from "../../../assets/styling";
-import Button from "../../molecules/Button";
+import ButtonContained from "../../molecules/ButtonContained";
 import TextInput from "../../molecules/TextInput";
 
 const button = [
   {
     label: "Cancel",
-    bgColor: "ButtonHighlight",
+    bgColor: "#BABABA",
   },
   {
     label: "OK",
@@ -14,22 +14,23 @@ const button = [
   },
 ];
 
-const CombinationComp = () => {
+const CombinationComp = ({ disabled }) => {
   return (
     <div>
       <div>
         <label style={{ ...styling.text }}>Input</label>
-        <TextInput style={{ marginTop: 5 }} />
+        <TextInput style={{ marginTop: 5 }} disabled={disabled} />
       </div>
       <div style={{ marginTop: 10 }}>
-        <label style={{ ...styling.text }}>Input Disabled With Button</label>
-        <div style={styling.alignCenter}>
-          <TextInput disabled={true} style={{ marginTop: 5 }} />
+        <label style={{ ...styling.text }}>Input With Button</label>
+        <div style={{ ...styling.alignCenter, alignItems: "flex-end" }}>
+          <TextInput disabled={disabled} style={{ marginTop: 5 }} />
           {button.map((el, id) => (
             <div key={id} style={{ marginLeft: 10 }}>
-              <Button
+              <ButtonContained
                 {...el}
                 onClick={(label) => console.log("Clicked!", label)}
+                disabled={disabled}
               />
             </div>
           ))}

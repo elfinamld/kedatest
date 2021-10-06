@@ -11,11 +11,4 @@ export const styling = {
     display: "flex",
     alignItems: "center",
   },
-  base: {
-    height: 30,
-    borderRadius: 5,
-    borderWidth: 0.2,
-    paddingLeft: 10,
-    paddingRight: 10,
-  },
 };
