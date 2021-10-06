@@ -1,9 +1,17 @@
 import React from "react";
+import { styling } from "../../../assets/styling";
+import "./index.css";
 
-const TextInput = ({ disabled }) => {
+const TextInput = ({ disabled, style }) => {
   return (
-    <div>
-      <input type={"text"} style={{ height: 30 }} disabled={disabled} />
+    <div style={style}>
+      <input
+        type={"text"}
+        style={styling.base}
+        name={"name"}
+        disabled={disabled}
+        placeholder={"Input text in here"}
+      />
     </div>
   );
 };

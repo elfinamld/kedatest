@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Date from "../../molecules/Date";
 import RadioButton from "../../molecules/RadioButton/RadioButton";
+import BaseView from "../BaseView/BaseView";
 
 const list = [
   {
@@ -22,8 +23,7 @@ const RadioWithDate = () => {
     setActive(value);
   };
   return (
-    <div style={{ marginTop: 20 }}>
-      Radio With Sub Component Date
+    <BaseView title={"Radio With Sub Component Date"}>
       <div>
         {list.map((el, id) => (
           <RadioButton
@@ -31,12 +31,13 @@ const RadioWithDate = () => {
             index={id}
             onChange={handleActive}
             active={active === el.value}
+            isLast={list.length - 1 !== id}
             {...el}
             label={active !== el.value ? el.label : null}
           />
         ))}
       </div>
-    </div>
+    </BaseView>
   );
 };
 

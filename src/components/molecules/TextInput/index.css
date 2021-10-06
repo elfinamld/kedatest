@@ -1,0 +1,27 @@
+input::-webkit-input-placeholder {
+  color: "#FAFAFA";
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: normal;
+}
+/*firefox 19+ versions*/
+input::-moz-placeholder {
+  color: "#FAFAFA";
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: normal;
+}
+/*IE  versions*/
+input::-ms-placeholder {
+  color: "#FAFAFA";
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: normal;
+}
+/*Latest modern browsers */
+input::placeholder {
+  color: "#FAFAFA";
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: normal;
+}

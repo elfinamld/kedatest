@@ -8,7 +8,7 @@ import RadioWithOther from "./components/organisms/RadioWithOther";
 class App extends Component {
   render() {
     return (
-      <div style={{ marginLeft: 15 }}>
+      <div style={{ margin: 15, padding: 15 }}>
         <RadioWithLabels />
         <RadioWithInput />
         <RadioWithDate />

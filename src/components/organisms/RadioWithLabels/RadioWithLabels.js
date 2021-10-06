@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import RadioButton from "../../molecules/RadioButton/RadioButton";
+import BaseView from "../BaseView";
 
 const list = [
   {
     value: "Radio A",
-    children: "Radio A",
+    label: "Radio A",
   },
   {
     value: "Radio B",
-    children: "Radio B",
+    label: "Radio B",
   },
   {
     value: "Radio C",
-    children: "Radio C",
+    label: "Radio C",
   },
 ];
 
@@ -24,8 +25,7 @@ const RadioWithLabels = () => {
   };
 
   return (
-    <div style={{ marginTop: 20 }}>
-      Radio With Label
+    <BaseView title={"Radio Button With Prop Label"}>
       <div style={{ display: "flex" }}>
         {list.map((el, id) => (
           <RadioButton
@@ -37,7 +37,7 @@ const RadioWithLabels = () => {
           />
         ))}
       </div>
-    </div>
+    </BaseView>
   );
 };
 

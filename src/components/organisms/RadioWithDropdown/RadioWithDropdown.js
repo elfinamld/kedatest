@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import DropDown from "../../molecules/DropDown/DropDown";
 import RadioButton from "../../molecules/RadioButton/RadioButton";
 import TextInput from "../../molecules/TextInput";
+import BaseView from "../BaseView/BaseView";
 
 const data = [
   {
@@ -58,8 +59,7 @@ const RadioWithDropdown = () => {
   ];
 
   return (
-    <div style={{ marginTop: 20 }}>
-      Radio With Sub Component Drop Down
+    <BaseView title={"Radio With Sub Component Drop Down"}>
       <div>
         {list.map((el, id) => (
           <RadioButton
@@ -67,12 +67,13 @@ const RadioWithDropdown = () => {
             index={id}
             onChange={handleActive}
             active={active === el.value}
+            isLast={list.length - 1 !== id}
             {...el}
             label={active !== el.value ? el.label : null}
           />
         ))}
       </div>
-    </div>
+    </BaseView>
   );
 };
 
