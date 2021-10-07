@@ -4,7 +4,9 @@ import { styling } from "../../../../assets/styling";
 const TitleText = ({ title }) => {
   return (
     <div>
-      <label style={styling.title}>{title}</label>
+      <label id={"title_text"} style={styling.title}>
+        {title}
+      </label>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import React from "react";
 import { styling } from "../../../assets/styling";
 import "./index.css";
 
-const TextInput = ({ disabled, style }) => {
+const TextInput = ({ disabled, style, testId }) => {
   return (
     <div style={style}>
       <TextField
@@ -17,6 +17,7 @@ const TextInput = ({ disabled, style }) => {
           borderWidth: 1,
         }}
         inputProps={{
+          "data-testid": testId || "text-field",
           sx: { ...styling.text },
         }}
         disabled={disabled}

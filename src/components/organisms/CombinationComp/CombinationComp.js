@@ -19,12 +19,20 @@ const CombinationComp = ({ disabled }) => {
     <div>
       <div>
         <label style={{ ...styling.text }}>Input</label>
-        <TextInput style={{ marginTop: 5 }} disabled={disabled} />
+        <TextInput
+          style={{ marginTop: 5 }}
+          disabled={disabled}
+          testId={"text-field-1"}
+        />
       </div>
       <div style={{ marginTop: 10 }}>
         <label style={{ ...styling.text }}>Input With Button</label>
         <div style={{ ...styling.alignCenter, alignItems: "flex-end" }}>
-          <TextInput disabled={disabled} style={{ marginTop: 5 }} />
+          <TextInput
+            disabled={disabled}
+            style={{ marginTop: 5 }}
+            testId={"text-field-2"}
+          />
           {button.map((el, id) => (
             <div key={id} style={{ marginLeft: 10 }}>
               <ButtonContained
@@ -39,7 +47,11 @@ const CombinationComp = ({ disabled }) => {
       <div style={{ marginTop: 10 }}>
         <label style={{ ...styling.text }}>Input Disabled</label>
         <div style={styling.alignCenter}>
-          <TextInput style={{ marginTop: 5 }} disabled={true} />
+          <TextInput
+            style={{ marginTop: 5 }}
+            disabled={true}
+            testId={"text-field-3"}
+          />
         </div>
       </div>
     </div>

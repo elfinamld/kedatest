@@ -41,7 +41,7 @@ const RadioWithDropdown = () => {
     {
       value: "opt1",
       label: "Representative",
-      children: <TextInput />,
+      children: <TextInput testId={"text-field"} />,
     },
     {
       value: "opt2",

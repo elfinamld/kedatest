@@ -6,14 +6,17 @@ const list = [
   {
     value: "Radio A",
     label: "Radio A",
+    ariaLabel: "Radio A",
   },
   {
     value: "Radio B",
     label: "Radio B",
+    ariaLabel: "Radio B",
   },
   {
     value: "Radio C",
     label: "Radio C",
+    ariaLabel: "Radio C",
   },
 ];
 

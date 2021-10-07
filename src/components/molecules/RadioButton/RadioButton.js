@@ -1,7 +1,15 @@
 import React from "react";
 import { styling } from "../../../assets/styling";
 
-const RadioButton = ({ value, children, onChange, active, label, isLast }) => {
+const RadioButton = ({
+  ariaLabel,
+  value,
+  children,
+  onChange,
+  active,
+  label,
+  isLast,
+}) => {
   return (
     <div
       style={{
@@ -11,15 +19,24 @@ const RadioButton = ({ value, children, onChange, active, label, isLast }) => {
         marginBottom: isLast ? 15 : 0,
       }}
     >
-      <input
-        type="radio"
-        defaultValue={value}
-        checked={active}
-        onChange={() => {
-          onChange(value);
+      <label
+        style={{
+          ...styling.text,
+          display: "flex",
         }}
-      />
-      <label style={{ ...styling.text, marginLeft: 10 }}>{label}</label>
+      >
+        <input
+          type="radio"
+          style={{ marginRight: 10 }}
+          defaultValue={value}
+          checked={active}
+          onChange={() => {
+            onChange(value);
+          }}
+        />
+
+        {label}
+      </label>
       {label ? null : children}
     </div>
   );

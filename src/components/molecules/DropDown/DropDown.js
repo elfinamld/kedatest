@@ -6,6 +6,7 @@ const DropDown = ({ data, title, open, onOpen, onClick }) => {
   return (
     <Select
       labelId="demo-simple-select-label"
+      aria-label={"select-multiple"}
       id="demo-simple-select"
       value={title}
       displayEmpty
