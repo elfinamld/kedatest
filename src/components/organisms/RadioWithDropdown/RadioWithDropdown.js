@@ -59,7 +59,7 @@ const RadioWithDropdown = () => {
   ];
 
   return (
-    <BaseView title={"Radio With Sub Component Select Option"}>
+    <BaseView title={"Radio With Sub Component Select"}>
       <div>
         {list.map((el, id) => (
           <RadioButton
